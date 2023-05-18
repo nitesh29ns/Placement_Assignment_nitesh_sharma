@@ -35,7 +35,7 @@ print(f"test case 1: {test_output_1}")
 
 ## Test case 2
 
-test_input_2 ="There are many animals at the zoo. My daughter has many toys.My son has many baseball cards. My teacher has many pencils."
+test_input_2 ="There are many animals at the zoo My daughter has many toys My son has many baseball cards My teacher has many pencils"
 
 test_output_2 = len_of_highest_frequency_word(input=test_input_2)
 print(f" test case 2 : {test_output_2}")
