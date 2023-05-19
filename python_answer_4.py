@@ -21,6 +21,12 @@ for i in range(len(data_json)):
     for j in keys:
         if j not in data_json[i].keys():
             data_json[i][j] = "Nan"
+
+
+#fill geolocation with dummy data
+for i in range(len(data_json)):
+    if data_json[i]['geolocation'] == "Nan":
+        data_json[i]['geolocation'] = {'type': 'Point', 'coordinates': [0.0,0.0]}
             
 
 # create a list of dictionary as per the requirements given in the questions
@@ -34,7 +40,7 @@ for i in range(len(data_json)):
             "Year at which Earth Meteorite was hit" :data_json[i]['year'],
             "reclat" :float(data_json[i]['reclat']),
             "recclong" :float(data_json[i]['reclong']),
-            "point coordinates":[int(data_json[0]['geolocation']['coordinates'][0]),int(data_json[0]['geolocation']['coordinates'][1])]}
+            "point coordinates":[int(data_json[i]['geolocation']['coordinates'][0]),int(data_json[i]['geolocation']['coordinates'][1])]}
     
     data.append(dic)
 
