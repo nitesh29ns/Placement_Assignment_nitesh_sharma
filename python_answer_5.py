@@ -21,7 +21,7 @@ for i in range(len(data)):
     dic= {"id":int(data[i]['id']),
           "url":str(data[i]['url']),
           "name":str(data[i]['name']),
-          "number":int(data[i]['number']),
+          "season":int(data[i]['season']),
           "type": str(data[i]['type']),
           "airdate":data[i]['airdate'],
           "airtime":datetime.datetime.strptime(data[i]['airtime'], "%H:%M").strftime("%I:%M %p"),
